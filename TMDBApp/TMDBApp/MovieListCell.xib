@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FavMovieListCell" customModule="TMDBApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="344" height="253"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="344" height="253"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A0d-WE-sZl">
+                        <rect key="frame" x="0.0" y="0.0" width="344" height="253"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t32-EX-U9k">
+                                <rect key="frame" x="0.0" y="0.0" width="344" height="253"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="t32-EX-U9k" firstAttribute="top" secondItem="A0d-WE-sZl" secondAttribute="top" id="b6B-Ov-XJX"/>
+                            <constraint firstAttribute="trailing" secondItem="t32-EX-U9k" secondAttribute="trailing" id="h0B-81-XxA"/>
+                            <constraint firstItem="t32-EX-U9k" firstAttribute="leading" secondItem="A0d-WE-sZl" secondAttribute="leading" id="rno-PL-orX"/>
+                            <constraint firstAttribute="bottom" secondItem="t32-EX-U9k" secondAttribute="bottom" id="urK-Ld-ZHB"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="A0d-WE-sZl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="RQ8-rC-Zp2"/>
+                <constraint firstAttribute="trailing" secondItem="A0d-WE-sZl" secondAttribute="trailing" id="TD5-00-ztp"/>
+                <constraint firstAttribute="bottom" secondItem="A0d-WE-sZl" secondAttribute="bottom" id="bPr-DS-PUc"/>
+                <constraint firstItem="A0d-WE-sZl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xQV-j2-3Da"/>
+            </constraints>
+            <size key="customSize" width="344" height="253"/>
+            <point key="canvasLocation" x="247.82608695652175" y="176.45089285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
