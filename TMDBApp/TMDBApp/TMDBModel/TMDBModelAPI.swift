@@ -19,7 +19,7 @@ class TMDBModelAPI{
 public struct IMDBDataResponse: Codable, Hashable {
     public let page: Int?
     public let dates: Dates?
-    public let results: [ResultData]?
+    public var results: [ResultData]?
     public let totalResults, totalPages: Int?
 
     enum CodingKeys: String, CodingKey {

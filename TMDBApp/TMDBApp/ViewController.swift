@@ -21,6 +21,7 @@ class ViewController: UIViewController, NetworkConstants {
     
     
     @IBOutlet weak var movieListCollectionView: UICollectionView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -126,6 +127,30 @@ extension ViewController{
         })
     }
     
+}
+
+extension ViewController: UISearchBarDelegate{
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.view.endEditing(true)
+        if searchBar.text != ""{
+            let filteredData = self.movieList?.results?.filter({($0.title?.contains(searchBar.text!))!})
+            self.update(with: filteredData!, animate: true, toSec: .first)
+        }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [self] in
+                searchBar.resignFirstResponder()
+                getMovieData()
+            }
+        }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.view.endEditing(true)
+        getMovieData()
+    }
 }
 
 enum Section: CaseIterable {
